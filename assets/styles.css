@@ -1,0 +1,56 @@
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+
+.first-container {
+    padding: 10px;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+}
+
+h1, h2 {
+    text-align: center;
+}
+
+
+.top-menu p {
+    float: right;
+
+}
+
+.second-container {
+    height: 100%;
+    width: 50%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+}
+
+.app-intro, main {
+    text-align: center;
+    margin-left: 5%;
+    margin-right: 5%;
+}
+
+.app-intro button {
+    display: block;
+    margin: 0 auto;
+}
+
+main {
+    display: none;
+}
+
+.question-screen button {
+    display: grid;
+    
+}
