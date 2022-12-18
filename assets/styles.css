@@ -46,11 +46,4 @@ h1, h2 {
     margin: 0 auto;
 }
 
-main {
-    display: none;
-}
 
-.question-screen button {
-    display: grid;
-    
-}
