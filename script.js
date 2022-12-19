@@ -21,6 +21,7 @@ function startQuiz() {
     questionScreen.classList.remove("hide")
     shuffledQuestions = question.sort(() => Math.random() - .5)
     currentQuestionIndex = 0
+    quizQuestions.classList.remove("hide")
     nextQuestion()
     
     
@@ -41,16 +42,16 @@ function nextQuestion() {
 
 function showQuestion(question) {
     quizQuestions.innerText = question.question
-    question.answer.array.forEach(answer => {
+    quizQuestions.answers.forEach(answers => {
         var button = document.createElement("button")
-        button.innerText = answer.text
+        button.innerText = answers.text
         button.classList.add("btn")
-        if (answer.correct) {
-            button.dataset.correct = answer.correct
+        if (answers.correct) {
+            button.dataset.correct = answers.correct
         }
         button.addEventListener("click", selectAnswer)
-        answerButtonsElement.appendChild(button)
-    });
+        answerButtons.appendChild(button)
+    })
 
 }
 
@@ -86,6 +87,15 @@ var question = [
             { text: "true", correct: true },
             { text: "false", correct: false}
         ]
-    }
+    },
+    {
+        question: "Numbers inside of quotations are called a string.",
+         answers: [
+            { text: "true", correct: true },
+            { text: "false", correct: false}
+        ]
+    },
+
+
 
 ]
