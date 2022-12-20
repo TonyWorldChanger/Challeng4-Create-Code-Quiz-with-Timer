@@ -19,7 +19,7 @@ function startQuiz() {
     console.log("it works");
     startQuizButton.classList.add("hide")
     questionScreen.classList.remove("hide")
-    shuffledQuestions = question.sort(() => Math.random() - .5)
+    //shuffledQuestions = questions.sort(() => Math.random() - .5)
     currentQuestionIndex = 0
     quizQuestions.classList.remove("hide")
     nextQuestion()
@@ -36,13 +36,13 @@ function setTime() {
 }
 
 function nextQuestion() {
-    showQuestion(shuffledQuestions[currentQuestionIndex])
+    showQuestion(questions[currentQuestionIndex]) 
 
 }
 
 function showQuestion(question) {
     quizQuestions.innerText = question.question
-    quizQuestions.answers.forEach(answers => {
+    question.answers.forEach(answers => {
         var button = document.createElement("button")
         button.innerText = answers.text
         button.classList.add("btn")
@@ -57,12 +57,20 @@ function showQuestion(question) {
 
 function selectAnswer(e) {
     var selectedButton = e.target
-    var correct = selectedButton.dataset.correct
-    setStatusClass(document.body, correct)
-    Array.from(answerButtonsElement.children).forEach(button => {
-        setStatusClass(button, button.dataset.correct)
-    })
+    // var correct = selectedButton.dataset.correct
+    // setStatusClass(document.body, correct)
+    // Array.from(answerButtons.children).forEach(button => {
+    //     setStatusClass(button, button.dataset.correct)
+    // }).
+    if (selectedButton.dataset.correct) {
+        currentQuestionIndex++
+        nextQuestion()
+    } else {
+        currentQuestionIndex++
+        nextQuestion()
+    }
     nextButton.classList.remove("hide")
+    console.log("does this work", selectedButton);
 }
 
 function setStatusClass(element, correct) {
@@ -74,13 +82,13 @@ function setStatusClass(element, correct) {
     }
 }
 
-function clearStatusClass(element) {
-    element.classList.remove("correct")
-    element.classList.remove("correct")
-}
+// function clearStatusClass(element) {
+//     element.classList.remove("correct")
+//     element.classList.remove("correct")
+// }
 
 
-var question = [
+var questions = [
     {
         question: "Characters inside of quotations are called a string.",
          answers: [
@@ -88,6 +96,7 @@ var question = [
             { text: "false", correct: false}
         ]
     },
+  
     {
         question: "Numbers inside of quotations are called a string.",
          answers: [
@@ -95,7 +104,7 @@ var question = [
             { text: "false", correct: false}
         ]
     },
-
+  
 
 
 ]
