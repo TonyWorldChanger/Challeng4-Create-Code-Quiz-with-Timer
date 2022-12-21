@@ -6,10 +6,18 @@ var timer;
 var quizQuestions = document.getElementById("question")
 var answerButtons = document.getElementById("truefalse-buttons")
 var shuffledQuestions, currentQuestionIndex
-
+var sec = 60;
+var highscoresButton = document.getElementById("highscores")
 
 startQuizButton.addEventListener("click", startQuiz)
 startQuizButton.addEventListener("click", setTime) 
+highscoresButton.addEventListener("click", () => {
+    var highscoresScreen = document.getElementById("highscores-screen")
+    highscoresScreen.classList.remove("hide")
+
+})
+
+
 nextButton.addEventListener("click", () => {
     currentQuestionIndex++
     nextQuestion()
@@ -28,7 +36,6 @@ function startQuiz() {
 }
 
 function setTime() {
-  var sec = 60;
   timer = setInterval(() =>{
     countDown.innerHTML = "00: "+sec;
     sec --;
@@ -42,6 +49,7 @@ function nextQuestion() {
 
 function showQuestion(question) {
     quizQuestions.innerText = question.question
+    answerButtons.innerHTML = ""
     question.answers.forEach(answers => {
         var button = document.createElement("button")
         button.innerText = answers.text
@@ -67,6 +75,7 @@ function selectAnswer(e) {
         nextQuestion()
     } else {
         currentQuestionIndex++
+        sec -= 5;
         nextQuestion()
     }
     nextButton.classList.remove("hide")

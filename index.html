@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -9,67 +10,68 @@
 </head>
 
 
-    <body>
+<body>
+    <div id="first-container" class="first-container">
+
+        <div id="top-menu" class="top-menu">
+            <button id="highscores">HIGHSCORES</button>
+            <p id="timer" class="timer">Timer: 00:60</p>
+        </div>
+
         <div id="first-container" class="first-container">
 
-            <div id="top-menu" class="top-menu">
-            <button>HIGHSCORES</button>
-            <p id="timer" class="timer">Timer: 00:60</p>
-            </div>
+            <header id="app-intro" class="app-intro">
+                <h1>Welcome To The Quiz</h1>
+                <p>This is a <strong>Timed Quiz</strong>! The timer will start as soon as you click the start quiz
+                    button. Additional time will be deducted whenever you select an incorrect answer. Good Luck!</p>
+                <button id="start-quiz" class="start-quiz">Start Quiz</button>
 
-             <div id="first-container" class="first-container">
-
-                <header id="app-intro" class="app-intro">
-                    <h1>Welcome To The Quiz</h1>
-                    <p>This is a <strong>Timed Quiz</strong>! The timer will start as soon as you click the start quiz button. Additional time will be deducted whenever you select an incorrect answer. Good Luck!</p>
-                    <button id="start-quiz" class="start-quiz">Start Quiz</button>
-
-                </header>
+            </header>
 
             <div class="container">
                 <div id="question-container" class="hide">
                     <div id="question">Question</div>
-                    <div id="truefalse-buttons" class="truefalse-buttons">
+                    <div id="truefalse-buttons" class="truefalse-buttons"></div>
                 </div>
-            </div>
             </div>
             <div class="controls">
                 <button id="next-btn" class="next-btn btn hide">Next</button>
             </div>
-        
-                <main>
 
-               
-
-                    <section id="submit-screen" class="submit-screen hide">
-                        <h2>Quiz Complete!</h2>
-                        <p>Your Final Score: 00</p>
-                        <form>
-                            <label for="">Enter Initials:</label>
-                            <input type="text">
-                            <button>Submit</button>
-                        </form>
-                    </section>
-
-                    <section id="highscores-screen" class="highscores-screen hide">
-                        <h2>Highscores:</h2>
-                        <ul>
-                            <li></li>
-                        </ul>
-                        <button>Go Back</button>
-                        <button>Clear Highscores</button>
-
-                    </section>
-                
-                </main>
+            <main>
 
 
-            </div>
+
+                <section id="submit-screen" class="submit-screen hide">
+                    <h2>Quiz Complete!</h2>
+                    <p>Your Final Score: 00</p>
+                    <form>
+                        <label for="">Enter Initials:</label>
+                        <input type="text">
+                        <button>Submit</button>
+                    </form>
+                </section>
+
+                <section id="highscores-screen" class="highscores-screen hide">
+                    <h2>Highscores:</h2>
+                    <ul>
+                        <li></li>
+                    </ul>
+                    <button>Go Back</button>
+                    <button>Clear Highscores</button>
+
+                </section>
+
+            </main>
+
 
         </div>
 
-    
-            <script src="script.js"></script>
-    
-    </body>
+    </div>
+
+
+    <script src="script.js"></script>
+
+</body>
+
 </html>
