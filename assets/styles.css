@@ -28,7 +28,7 @@ h1, h2 {
 
 .container {
     padding: 10px;
-    height: 100vh;
+    height: auto;
     display: flex;
     flex-direction: column;
     justify-content: center;
