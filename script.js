@@ -11,12 +11,12 @@ var highscoresButton = document.getElementById("highscores")
 var submitScreen = document.getElementById("submit-screen")
 var finalScore = document.getElementById("final-score")
 var submitButton = document.getElementById("submit-btn")
-var submitInput = docoument.getElementById("input")
+//var submitInput = docoument.getElementById("input")
 
 
 startQuizButton.addEventListener("click", startQuiz)
 startQuizButton.addEventListener("click", setTime) 
-submitButton.addEventListener("click", submitHighscore)
+//submitButton.addEventListener("click", submitHighscore)
 highscoresButton.addEventListener("click", () => {
     var highscoresScreen = document.getElementById("highscores-screen")
     highscoresScreen.classList.remove("hide")
@@ -24,16 +24,10 @@ highscoresButton.addEventListener("click", () => {
 })
 
 
-// //nextButton.addEventListener("click", () => {
-//     currentQuestionIndex++
-//     nextQuestion()
-// })
-
 function startQuiz() {
     console.log("it works");
     startQuizButton.classList.add("hide")
     questionScreen.classList.remove("hide")
-    //shuffledQuestions = questions.sort(() => Math.random() - .5)
     currentQuestionIndex = 0
     quizQuestions.classList.remove("hide")
     nextQuestion()
@@ -83,11 +77,6 @@ function showQuestion(question) {
 
 function selectAnswer(e) {
     var selectedButton = e.target
-    // var correct = selectedButton.dataset.correct
-    // setStatusClass(document.body, correct)
-    // Array.from(answerButtons.children).forEach(button => {
-    //     setStatusClass(button, button.dataset.correct)
-    // }).
     if (selectedButton.dataset.correct) {
         currentQuestionIndex++
         nextQuestion()
@@ -96,8 +85,7 @@ function selectAnswer(e) {
         sec -= 5;
         nextQuestion()
     }
-    // nextButton.classList.remove("hide")
-    // console.log("does this work", selectedButton);
+
 }
 
 function setStatusClass(element, correct) {
@@ -108,13 +96,6 @@ function setStatusClass(element, correct) {
         element.classList.add("wrong")
     }
 }
-
-function submitHighscore () {
-    var userName = input.value
-    localStorage.setItem(JSON)
-}
-
-
 
 var questions = [
     {
