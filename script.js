@@ -22,7 +22,7 @@ highscoresButton.addEventListener("click", () => {
 
 })
 
-
+// makes the start quiz button go to the first question. removes "hide" from questions.
 function startQuiz() {
     console.log("it works");
     startQuizButton.classList.add("hide")
@@ -33,7 +33,7 @@ function startQuiz() {
       
     
 }
-
+// makes the timer countdown per criteria
 function setTime() {
   timer = setInterval(() =>{
     countDown.innerHTML = "00: "+sec;
@@ -46,7 +46,7 @@ function nextQuestion() {
     showQuestion(questions[currentQuestionIndex]) 
 
 }
-
+// showQuestion allows the questions to be seen when the answer(s) are selected. allows it to go to the next question.
 function showQuestion(question) {
     if (currentQuestionIndex > questions.length) {
         submitScreen.classList.remove("hide")
@@ -73,7 +73,7 @@ function showQuestion(question) {
     }
     
 }
-
+// deducts time if the answer is incorrect.
 function selectAnswer(e) {
     var selectedButton = e.target
     if (selectedButton.dataset.correct) {
@@ -86,7 +86,7 @@ function selectAnswer(e) {
     }
 
 }
-
+// this is the condition for if a question is answered correctly or not.
 function setStatusClass(element, correct) {
     clearStatusClass(element)
     if (correct) {
@@ -95,7 +95,7 @@ function setStatusClass(element, correct) {
         element.classList.add("wrong")
     }
 }
-
+// questions for quiz. 
 var questions = [
     {
         question: "Characters inside of quotations are called a string.",
