@@ -31,7 +31,7 @@ THEN I can save my initials and my score
  The application works by pressing the "Start Quiz" button, then the user will be prompted with true or false questions. When the "Start Quiz" button is clicked, the timer will start. The timer will deduct additional time for each incorrect answer. The user's score will be shown after after the quiz is completed, please and name to available slot. The submit button will return the user to the beginning of the app. The high scores button does not work unfortunately.
 
 ### ScreenShot of Challenge
-![Challenge4]()
+![Challenge4](assets/challenge%204%20quiz%20timer.PNG)
 
 
 ## Credits
