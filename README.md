@@ -7,28 +7,36 @@ AS A coding boot camp student
 I WANT to take a timed quiz on JavaScript fundamentals that stores high scores
 SO THAT I can gauge my progress compared to my peers
 
+Acceptance Criteria
+GIVEN I am taking a code quiz
+WHEN I click the start button
+THEN a timer starts and I am presented with a question
+WHEN I answer a question
+THEN I am presented with another question
+WHEN I answer a question incorrectly
+THEN time is subtracted from the clock
+WHEN all questions are answered or the timer reaches 0
+THEN the game is over
+WHEN the game is over
+THEN I can save my initials and my score
+
 
   ## Installation
  No installation required
 
  ## Usage
 
-[Github Page Address](https://tonyworldchanger.github.io/Challenge3-Password-Generator-JS-Improvements/)
+[Github Page Address]()
 
- The application works by pressing the red "Generate Password" button. The user will be prompted with five questions. 
- 1. Character Length
- 2.Does the user want to the password to include lowercase letters.
- 3.Does the user want to the password to include uppercase letters.
- 4.Does the user want to the password to include special characters.
- 5.Does the user want to the password to include numbers.
-
- Character Length must be between 8-128 characters. If this is not entered correctly, the user will not be allowed to proceed. The "cancel" option will tell the application not use above user choices. 
+ The application works by pressing the "Start Quiz" button, then the user will be prompted with true or false questions. When the "Start Quiz" button is clicked, the timer will start. The timer will deduct additional time for each incorrect answer. The user's score will be shown after after the quiz is completed, please and name to available slot. The submit button will return the user to the beginning of the app. The high scores button does not work unfortunately.
 
 ### ScreenShot of Challenge
-![Challenge3](Assets/randompasswordapp01.png)
+![Challenge4]()
 
 
 ## Credits
-Mr. Vega Tutorials - Daniel Vega Youtube page
+William Horn Youtube page
+Web Dev Simplified Youtube page
 Instructor Aaron Brown
-Florin Pop - Youtube page 
+TA Cameron Verver
+Tutor Dru Sanchez
