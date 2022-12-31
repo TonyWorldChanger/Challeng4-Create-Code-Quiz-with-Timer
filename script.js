@@ -1,5 +1,4 @@
 var startQuizButton = document.getElementById("app-intro")
-//var nextButton = document.getElementById("next-btn")
 var questionScreen = document.getElementById("question-container")
 var countDown = document.getElementById("timer");
 var timer;
